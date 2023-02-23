@@ -107,16 +107,14 @@ if __name__ == "__main__":
         
         #try to call float(smoker_temp) to get numeric values
         ch1 = (timestamp, smoker_temp)
-        #smoker_msg = ",".join(ch1)
-        smoker_msg = round(float(smoker_temp),2)
-
+        smoker_msg = ",".join(ch1)
+         
         ch2 = (timestamp, food_A_temp)
-        #food_A_msg = ",".join(ch2)
-        food_A_msg = round(float(food_A_temp),2)
-
+        food_A_msg = ",".join(ch2)
+         
         ch3 = (timestamp, food_B_temp)
-        #food_B_msg = ",".join(ch3)
-        food_B_msg = round(float(food_B_msg), 2)
+        food_B_msg = ",".join(ch3)
+         
 
         # send the tuple of (time stamp and Smoker temp) to the 01-smoker queue
         send_message("localhost","01-smoker",smoker_msg)

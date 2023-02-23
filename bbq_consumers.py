@@ -57,7 +57,7 @@ def food_A_callback(ch, method, properties, body):
         #if the temp has changed less than 1 degree then an alert is sent
         if food_A_temp_check < 1:
             print("Current Food A temp is:", str(food_A_temp[0]),";", "Food A temp change in last 10 minutes is:", food_A_temp_check)
-            print("food stall on food A!")
+            print("Food stall alert! Food A temperature changed by 1 degree or less in 10 minutes!")
         #Show work in progress, letting the user know the changes
         else:
             print("Current Food A temp is:", str(food_A_temp[0]),";","Food A temp change in last 10 minutes is:", food_A_temp_check)
@@ -86,7 +86,7 @@ def food_B_callback(ch, method, properties, body):
         #if the temp has changed less than 1 degree then an alert is sent
         if food_B_temp_check < 1:
             print("Current Food B temp is:", str(food_B_temp[0]),";", "Food B temp change in last 10 minutes is:", food_B_temp_check)
-            print("food stall on food B!")
+            print("food stall alert! Food B temperature changed by 1 degree or less in 10 minutesB!")
         #Show work in progress, letting the user know the changes
         else:
             print("Current Food B temp is:",str(food_B_temp[0]),";","Food B temp change in last 10 minutes is:", food_B_temp_check)

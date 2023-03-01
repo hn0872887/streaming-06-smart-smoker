@@ -17,7 +17,10 @@ Simulate a streaming series of temperature readings from our smart smoker and tw
 
 ### smoker-temps.csv has 4 columns:
 
-[0] Time = Date-time stamp for the sensor reading [1] Channel1 = Smoker Temp --> send to message queue "01-smoker" [2] Channe2 = Food A Temp --> send to message queue "02-food-A" [3] Channe3 = Food B Temp --> send to message queue "03-food-B"
+* [0] Time = Date-time stamp for the sensor reading 
+* [1] Channel1 = Smoker Temp --> send to message queue "01-smoker" 
+* [2] Channe2 = Food A Temp --> send to message queue "02-food-A" 
+* [3] Channe3 = Food B Temp --> send to message queue "03-food-B"
 
 Significant Events We want know if:
 

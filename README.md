@@ -33,9 +33,9 @@ That is:
 * IGNORE the real timestamps evaluate the deque of readings (either 5 or 20) as though the real timestamps were not so terrible. It's more complex if we try to use real timestamps. Adjusting for the non-regular timestamps is an interesting problem, but not the point. Know that you will likely have to address issues like that in the "real world".
 
 ### Producer (bbq_producer.py)
-  ![](bbq-procuder.png)
 
 The producer opens the csv file, smoker-temps.csv, and reads each row. For each row, a connection is made to Rabbit MQ, queues are declared, each columns is read and submitted to its respective queue. For each column, the time is captured, then the temp, sending both to the queue as a row. If there is no temp then no message is sent to that queue.
+  ![](bbq-producer.png)
 
 ### Consumer (bbq_consumers.py)
  The consumer created to establishe a connection with RabbitMQ, declares the queue, then starts consuming the messages from the three queues through the callback functions. The callbacks have a deque that are processing a defined number of messages, representing the last number of defined minutes. The temp from the messages are analyzed to determine if there is cause for alarm. If not, information is simply reported.
